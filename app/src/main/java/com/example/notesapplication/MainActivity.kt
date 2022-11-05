@@ -40,7 +40,8 @@ class MainActivity : AppCompatActivity(), NoteClickDeleteInterface, NoteClickInt
 
     override fun onDeleteIconClick(note: Note) {
         viewModel.deleteNote(note)
-        Toast.makeText(this, "@{note.noteTitle} Deleted", Toast.LENGTH_LONG).show()
+        val name = note.noteTitle.toString()
+        Toast.makeText(this, name + " Deleted", Toast.LENGTH_LONG).show()
     }
     override fun onNoteClick(note: Note) {
         val intent = Intent(this@MainActivity, AddEditNoteActivity::class.java)

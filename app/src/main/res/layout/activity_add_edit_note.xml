@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/black_1"
+    android:background="@color/beige"
     tools:context=".AddEditNoteActivity">
 
     <EditText
@@ -12,12 +12,13 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
-        android:layout_margin="10dp"
+        android:layout_marginVertical="20dp"
+        android:textStyle="bold"
         android:hint="Enter Note Title"
-        android:paddingTop="10dp"
-        android:paddingBottom="30dp"
-        android:textColor="@color/white"
-        android:textColorHint="@color/white" />
+        android:textSize="20sp"
+        android:paddingBottom="40dp"
+        android:textColor="@color/liver"
+        android:textColorHint="@color/liver" />
 
     <EditText
         android:id="@+id/idEditNoteDescription"
@@ -26,10 +27,10 @@
         android:layout_margin="10dp"
         android:layout_above="@id/idBtnAddUpdate"
         android:layout_below="@id/idEditNoteTitle"
-        android:background="@color/black_1"
         android:hint="Enter Note Description"
-        android:textColorHint="@color/white"
-        android:textColor="@color/white"
+        android:textColorHint="@color/liver"
+        android:textSize="20sp"
+        android:textColor="@color/liver"
         android:gravity="start|top"
         android:inputType="textMultiLine"
         android:singleLine="false"/>
@@ -38,12 +39,14 @@
         android:id="@+id/idBtnAddUpdate"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="20dp"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginVertical="10dp"
         android:layout_alignParentBottom="true"
         android:text="Button"
+        android:textSize="20sp"
         android:textColor="@color/white"
         android:textAllCaps="false"
-        android:background="@drawable/custom_button_back"
+        android:backgroundTint="@color/solid_pink"
         />
 
 </RelativeLayout>

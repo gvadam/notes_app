@@ -43,7 +43,8 @@ class AddEditNoteActivity : AppCompatActivity() {
 
             if(noteType.equals("Edit")){
                 if(noteTitle.isNotEmpty() && noteDescription.isNotEmpty()){
-                    val sdf = SimpleDateFormat("dd MM, yyyy - HH:mm")
+                    //val sdf = SimpleDateFormat("dd MM, yyyy - HH:mm")
+                    val sdf = SimpleDateFormat("MM dd, yyyy - HH:mm")
                     val currentDate: String = sdf.format(Date())
                     val updateNote = Note(noteTitle, noteDescription, currentDate)
                     updateNote.id = noteID
@@ -52,7 +53,8 @@ class AddEditNoteActivity : AppCompatActivity() {
                 }
             } else {
                 if(noteTitle.isNotEmpty() && noteDescription.isNotEmpty()){
-                    val sdf = SimpleDateFormat("dd MM, yyyy - HH:mm")
+                    //val sdf = SimpleDateFormat("dd MM, yyyy - HH:mm")
+                    val sdf = SimpleDateFormat("MM dd, yyyy - HH:mm")
                     val currentDate: String = sdf.format(Date())
                     viewModel.addNote(Note(noteTitle,noteDescription,currentDate))
                     Toast.makeText(this, "Note Added...", Toast.LENGTH_LONG).show()
